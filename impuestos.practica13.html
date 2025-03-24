@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingresos Anuales</title>
+</head>
+<body>
+    <h1>Formulario de Ingresos Anuales</h1>
+    <form action="process.php" method="POST">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="income">Selecciona tus ingresos anuales:</label><br>
+        <select id="income" name="income" required>
+            <option value="1-1000">1 - 1000</option>
+            <option value="1001-3000">1001 - 3000</option>
+            <option value="3001">Más de 3000</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
