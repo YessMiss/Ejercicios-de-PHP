@@ -1,0 +1,23 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener el nombre
+    $name = isset($_POST['name']) ? $_POST['name'] : "No ingresado";
+
+    // Obtener los ingresos anuales
+    $income = isset($_POST['income']) ? $_POST['income'] : "No seleccionado";
+
+    // Verificar si la persona debe pagar impuestos
+    $payTaxesMessage = "";
+    if ($income == "3001") {
+        $payTaxesMessage = "Debes pagar impuestos.";
+    } else {
+        $payTaxesMessage = "No debes pagar impuestos.";
+    }
+
+    // Mostrar los resultados
+    echo "<h1>Información Recibida</h1>";
+    echo "<p>Nombre: <b>$name</b></p>";
+    echo "<p>Ingresos anuales: <b>$income</b></p>";
+    echo "<p>$payTaxesMessage</p>";
+}
+?>
