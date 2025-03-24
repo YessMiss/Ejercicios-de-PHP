@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Pizzas</title>
+</head>
+<body>
+    <h1>Formulario de Pedido de Pizzas</h1>
+    <form action="procesar_pedido.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="jamon">Jamon y Queso:</label>
+        <input type="checkbox" id="jamon" name="jamon" value="Jamon y Queso">
+        Cantidad: <input type="text" name="cantidad_jamon" id="cantidad_jamon" value="0"><br><br>
+
+        <label for="napolitana">Napolitana:</label>
+        <input type="checkbox" id="napolitana" name="napolitana" value="Napolitana">
+        Cantidad: <input type="text" name="cantidad_napolitana" id="cantidad_napolitana" value="0"><br><br>
+
+        <label for="mozzarella">Mozzarella:</label>
+        <input type="checkbox" id="mozzarella" name="mozzarella" value="Mozzarella">
+        Cantidad: <input type="text" name="cantidad_mozzarella" id="cantidad_mozzarella" value="0"><br><br>
+
+        <input type="submit" value="Confirmar Pedido">
+    </form>
+</body>
+</html>
